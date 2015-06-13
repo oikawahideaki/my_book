@@ -23,7 +23,7 @@
         <td><img src="<%= book.img %>" alt="<%= book.name %>の表紙画像" class="img-responsive"></td>
         <td><%= book.name %></td>
         <td><%= book.writer %></td>
-        <td><%= book.price %></td>
+        <td><%= number_to_currency(book.price, unit: "¥",precision: 0) %></td>
         <td><%= book.company %></td>
         <td><%= book.release %></td>
         <td><%= book.code %></td>

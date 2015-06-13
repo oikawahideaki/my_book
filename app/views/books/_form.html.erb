@@ -1,0 +1,49 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :タイトル %><br>
+    <%= f.text_field :name,class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :著者 %><br>
+    <%= f.text_field :writer,class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :価格 %><br>
+    <%= f.number_field :price,class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :出版社 %><br>
+    <%= f.text_field :publishing,class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :company %><br>
+    <%= f.text_field :company,class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :発売日 %><br>
+    <%= f.date_select :release,class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :ISBN %><br>
+    <%= f.text_field :code,class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :img %><br>
+    <%= f.text_field :img,class: "form-control"%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

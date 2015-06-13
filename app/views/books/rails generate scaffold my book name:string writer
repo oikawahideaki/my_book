@@ -1,0 +1,1 @@
+rails generate scaffold my book name:string writer:string price:integer company:string release: code:string
